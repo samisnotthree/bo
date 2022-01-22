@@ -1,25 +1,16 @@
 package com.sint.he.test.vo;
 
 public class TestVo {
-	private Long mbrNo;
 	private String id;
 	private String name;
 
-	public TestVo() {
-	}
-
-	public TestVo(String id, String name) {
-		this.id = id;
-		this.name = name;
-	}
-
-	public Long getMbrNo() {
-		return mbrNo;
-	}
-
-	public void setMbrNo(Long mbrNo) {
-		this.mbrNo = mbrNo;
-	}
+//	public TestVo() {
+//	}
+//
+//	public TestVo(String id, String name) {
+//		this.id = id;
+//		this.name = name;
+//	}
 
 	public String getId() {
 		return id;
