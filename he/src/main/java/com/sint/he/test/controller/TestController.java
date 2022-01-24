@@ -1,8 +1,7 @@
 package com.sint.he.test.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.sint.he.test.service.TestService;
-import com.sint.he.test.vo.TestVo;
+
 
 @Controller
 public class TestController {
@@ -49,12 +48,27 @@ public class TestController {
 		return "thymeleaf/thymeleafTest";
 	}
 
+//	@RequestMapping(value = "/test")
+//	public ModelAndView test() throws Exception {
+//		ModelAndView mav = new ModelAndView("test");
+//		List<TestVo> testList = testService.selectTest();
+//		mav.addObject("list", testList);
+//		return mav;
+//	}
+
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 	@RequestMapping(value = "/test")
 	public ModelAndView test() throws Exception {
-		ModelAndView mav = new ModelAndView("test");
-		List<TestVo> testList = testService.selectTest();
-		mav.addObject("list", testList);
-		return mav;
+		logger.trace("Trace Level 테스트");
+		logger.debug("DEBUG Level 테스트");
+		logger.info("INFO Level 테스트");
+		logger.warn("Warn Level 테스트");
+		logger.error("ERROR Level 테스트");
+		
+		testService.selectTest();
+		
+		return new ModelAndView();
 	}
 
 }
