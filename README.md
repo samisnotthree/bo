@@ -7,3 +7,4 @@ he project
 - AWS
 - Maven
 - JUnit
+- SpringBootTest
