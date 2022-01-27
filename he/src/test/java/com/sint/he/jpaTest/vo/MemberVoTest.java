@@ -3,6 +3,7 @@ package com.sint.he.jpaTest.vo;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 public class MemberVoTest {
 	@Test
@@ -22,7 +23,8 @@ public class MemberVoTest {
 				.name("he")
 				.build();
 		final String name = memberVo.getName();
-		assertEquals("he2", name);
+		//assertEquals("he", name);
+		assertSame("he2", name);
 	}
 
 }
