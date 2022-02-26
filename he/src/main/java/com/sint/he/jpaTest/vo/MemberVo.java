@@ -3,13 +3,13 @@ package com.sint.he.jpaTest.vo;
 import lombok.*;
 import javax.persistence.*;
 
-@Data
+@Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity(name = "member")
 public class MemberVo {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long mbrNo;
 	private String id;
 	private String name;
