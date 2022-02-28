@@ -6,4 +6,3 @@ he project
 - MariaDB
 - AWS
 - Maven
-- JUnit
